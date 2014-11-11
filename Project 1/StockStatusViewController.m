@@ -9,6 +9,7 @@
 #import "StockStatusViewController.h"
 #import "Portfolio.h"
 #import "StatusTableViewCell.h"
+#import "StockDetailViewController.h"
 
 #define STOCK_DATA_QUERY_URL_P1 @"https://query.yahooapis.com/v1/public/yql?q=select%20Change%2C%20LastTradePriceOnly%2C%20Symbol%20from%20yahoo.finance.quote%20where%20symbol%20in%20("
 #define COMMA_ENCODING @"%2C"
@@ -25,6 +26,7 @@
 @interface StockStatusViewController () <UITableViewDataSource, UITableViewDelegate>
 - (IBAction)removePressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *removeButton;
+@property StockInfo *selectedStock;
 
 @end
 
@@ -41,6 +43,7 @@
     portfolio = [Portfolio sharedInstance];
     holdingsData = [[NSMutableArray alloc] init];
     watchingData = [[NSMutableArray alloc] init];
+    self.selectedStock=[[StockInfo alloc]init];
     self.title = @"Stock Status";
     
     // Initalize the pull-to-refresh control.
@@ -335,4 +338,50 @@
         }
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    StockDetailViewController *dest = segue.destinationViewController;
+    
+    dest.selectedStock=[[StockInfo alloc]init];
+    
+    //Hardcoded values since I was un sure on how you wanted to get that data
+    dest.selectedStock.Name=@"American Express";
+    dest.selectedStock.volume=5;
+    dest.selectedStock.marketCap=50;
+    dest.selectedStock.peRatio=.76;
+    
+    //code to use once data is stored in object.
+  /*  dest.selectedStock.Name=self.selectedStock.Name;
+    dest.selectedStock.volume=self.selectedStock.volume;
+    dest.selectedStock.marketCap=self.selectedStock.marketCap;
+    dest.selectedStock.peRatio=self.selectedStock.peRatio;*/
+    
+    
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    /*
+    add check to see if object selected was in holding or watching
+     
+    self.selectedStock=[holdingsData objectAtIndex:indexPath.row];
+    self.selectedStock=[watchingData objectAtIndex:indexPath.row];
+     
+     Or you could perform a search to get the info that the StockInfo object holds, like a json.
+     Wasn't sure how you wanted to grab that data but I have set it up to send it over and display, once thats implemented. 
+     
+     */
+    
+    
+    [self performSegueWithIdentifier:@"detail" sender:self];
+    
+}
+
+
+
+
+
 @end

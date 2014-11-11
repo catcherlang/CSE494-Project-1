@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EDF13D41A11DEA000DCA093 /* StockDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDF13D31A11DEA000DCA093 /* StockDetailViewController.m */; };
+		3EDF13D71A11E21F00DCA093 /* StockInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDF13D61A11E21F00DCA093 /* StockInfo.m */; };
 		664CACE81A0198E100D6B4FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 664CACE71A0198E100D6B4FF /* main.m */; };
 		664CACEB1A0198E100D6B4FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 664CACEA1A0198E100D6B4FF /* AppDelegate.m */; };
 		664CACEE1A0198E100D6B4FF /* StockStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 664CACED1A0198E100D6B4FF /* StockStatusViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EDF13D21A11DEA000DCA093 /* StockDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockDetailViewController.h; sourceTree = "<group>"; };
+		3EDF13D31A11DEA000DCA093 /* StockDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockDetailViewController.m; sourceTree = "<group>"; };
+		3EDF13D51A11E21F00DCA093 /* StockInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockInfo.h; sourceTree = "<group>"; };
+		3EDF13D61A11E21F00DCA093 /* StockInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockInfo.m; sourceTree = "<group>"; };
 		664CACE21A0198E100D6B4FF /* Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		664CACE61A0198E100D6B4FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		664CACE71A0198E100D6B4FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +124,10 @@
 				669144F11A099C930006A4FA /* PortfolioTableViewCell.h */,
 				669144F21A099C930006A4FA /* PortfolioTableViewCell.m */,
 				664CACF21A0198E100D6B4FF /* Main.storyboard */,
+				3EDF13D51A11E21F00DCA093 /* StockInfo.h */,
+				3EDF13D61A11E21F00DCA093 /* StockInfo.m */,
+				3EDF13D21A11DEA000DCA093 /* StockDetailViewController.h */,
+				3EDF13D31A11DEA000DCA093 /* StockDetailViewController.m */,
 				664CAD111A01A68000D6B4FF /* Stock.h */,
 				664CAD121A01A68000D6B4FF /* Stock.m */,
 				664CAD0E1A01A61200D6B4FF /* Portfolio.h */,
@@ -267,6 +277,8 @@
 				664CACEB1A0198E100D6B4FF /* AppDelegate.m in Sources */,
 				664CACEE1A0198E100D6B4FF /* StockStatusViewController.m in Sources */,
 				669144F31A099C930006A4FA /* PortfolioTableViewCell.m in Sources */,
+				3EDF13D71A11E21F00DCA093 /* StockInfo.m in Sources */,
+				3EDF13D41A11DEA000DCA093 /* StockDetailViewController.m in Sources */,
 				664CAD101A01A61200D6B4FF /* Portfolio.m in Sources */,
 				664CACE81A0198E100D6B4FF /* main.m in Sources */,
 				9D55F7A41A05810900B630CC /* StatusTableViewCell.m in Sources */,
